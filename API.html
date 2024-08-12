@@ -9,6 +9,8 @@
 <body>
     <header>
         <h1>My Photo Portfolio</h1>
+    </header>
+    <header class="hero">
         <nav>
             <ul>
                 <li><a href="#" onclick="fetchImages('landscape')">Landscape</a></li>
@@ -18,10 +20,28 @@
                 <li><a href="#" onclick="fetchImages('nature')">Nature</a></li>
             </ul>
         </nav>
+        <div class="hero-content">
+            <h1>Welcome to My Photo Portfolio</h1>
+            <p>Explore a world of landscapes, portraits, and more through my lens.</p>
+            <a href="#gallery" class="hero-button">View Gallery</a>
+        </div>
     </header>
-    <main id="gallery">
-    
-    </main>
+    <main id="gallery"></main>
     <script src="script.js"></script>
 </body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Me</h3>
+            <p>Passionate photographer capturing the beauty of the world.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: example@example.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 My Photo Portfolio. All rights reserved.</p>
+    </div>
+</footer>
 </html>
