@@ -23,3 +23,19 @@ function displayImages(photos) {
 
 
 fetchImages('landscape');
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+    accordionToggles.forEach(toggle => {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            const content = this.nextElementSibling;
+
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    });
+});
