@@ -13,12 +13,17 @@
     <header class="hero">
         <nav>
             <ul>
-                <li><a href="#" onclick="fetchImages('landscape')">Landscape</a></li>
-                <li><a href="#" onclick="fetchImages('portrait')">Portrait</a></li>
-                <li><a href="#" onclick="fetchImages('night')">Night</a></li>
-                <li><a href="#" onclick="fetchImages('architecture')">Architecture</a></li>
-                <li><a href="#" onclick="fetchImages('nature')">Nature</a></li>
-            </ul>
+           <li class="accordion">
+                    <a href="#" class="accordion-toggle">Gallery Categories</a>
+                    <ul class="accordion-content">
+                        <li><a href="#" onclick="fetchImages('landscape')">Landscape</a></li>
+                        <li><a href="#" onclick="fetchImages('portrait')">Portrait</a></li>
+                        <li><a href="#" onclick="fetchImages('night')">Night</a></li>
+                        <li><a href="#" onclick="fetchImages('architecture')">Architecture</a></li>
+                        <li><a href="#" onclick="fetchImages('nature')">Nature</a></li>
+                </ul>
+            </li>
+         </ul>
         </nav>
         <div class="hero-content">
             <h1>Welcome to My Photo Portfolio</h1>
