@@ -1,7 +1,30 @@
-nav { 
+nav {
+    display: flex;
     justify-content: center;
-     background-color: #f0f8ff;
+    background-color: #f0f8ff; /* Matching the body's background color */
+    padding: 10px 0; /* Optional: Adds some padding around the navbar */
 }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Adds space between the links */
+}
+
+nav ul li a {
+    color: #00416a; /* Color of the text */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
