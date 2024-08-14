@@ -5,48 +5,15 @@ body {
     margin: 0;
     padding: 0;
 }
-
+ 
 header {
     background-color: #00416a;
     color: white;
     padding: 1rem;
     text-align: center;
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #00aaff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 1rem;
-    border: 2px solid #00416a;
-    border-radius: 5px;
-}
-header.hero {
+ 
+.hero {
     background-color: #00416a;
     color: #fff;
     padding: 100px 20px;
@@ -56,42 +23,6 @@ header.hero {
     justify-content: center;
     align-items: center;
     position: relative;
-}
- 
- 
-header nav {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
- 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
- 
-nav ul li {
-    margin: 0;
-}
- 
-nav ul li a {
-    color: #00aaff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
- 
-nav ul li a:hover {
-    text-decoration: underline;
-}
- 
-.hero-content {
-    max-width: 800px;
-    margin-top: 50px;
-    /* Space between navigation and hero content */
 }
  
 .hero-content {
@@ -125,18 +56,39 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
  
- 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
+.accordion {
+    margin: 1rem auto;
+    max-width: 800px;
 }
  
-img {
+.accordion-button {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.4s ease;
+}
+ 
+.accordion-button:hover {
+    background-color: #ddd;
+}
+ 
+.accordion-content {
+    display: none;
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+}
+ 
+.accordion-content img {
     max-width: 100%;
     height: auto;
-    margin: 1rem;
+    margin: 1rem 0;
     border: 2px solid #00416a;
     border-radius: 5px;
 }
@@ -185,13 +137,8 @@ footer {
         font-size: 0.9rem;
     }
  
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
- 
-    nav ul li {
-        margin: 0.5rem 0;
+    .accordion-button {
+        font-size: 14px;
     }
  
     .footer-content {
@@ -223,88 +170,10 @@ footer {
         font-size: 0.8rem;
     }
  
-    nav ul li {
-        display: block;
-        margin: 0.5rem 0;
+    .accordion-button {
+        font-size: 12px;
     }
  
-    img {
-        width: 100%;
-        margin: 0.5rem 0;
-    }
-}
-
-.accordion {
-    list-style: none;
-    padding: 0;
-}
-
-.accordion-toggle {
-    display: block;
-    background-color: #00416a;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.accordion-toggle:hover {
-    background-color: #0056b3;
-}
-
-.accordion-content {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    background-color: #333;
-}
-
-.accordion-content li {
-    border-bottom: 1px solid #555;
-}
-
-.accordion-content li a {
-    display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.accordion-content li a:hover {
-    background-color: #555;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 50px 20px;
-    }
-
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .hero-button {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 0.5rem 0;
-    }
-
     img {
         width: 100%;
         margin: 0.5rem 0;
