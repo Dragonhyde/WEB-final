@@ -1,5 +1,23 @@
 const apiKey = 'DSP8IOa7ykZ41elGRlam2wyBbAwgNLTIJOfTYAokdSMtnxfcIYEn19rk';
-
+ 
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', async () => {
+        const category = button.textContent.toLowerCase();
+        await fetchImages(category);
+ 
+    
+        const content = button.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                item.style.display = 'none';
+            });
+            content.style.display = "block";
+        }
+    });
+});
+ 
 async function fetchImages(category) {
     const response = await fetch(`https://api.pexels.com/v1/search?query=${category}&per_page=12`, {
         headers: {
@@ -7,35 +25,16 @@ async function fetchImages(category) {
         }
     });
     const data = await response.json();
-    displayImages(data.photos);
+    displayImages(data.photos, category);
 }
-
-function displayImages(photos) {
-    const gallery = document.getElementById('gallery');
-    gallery.innerHTML = '';
+ 
+function displayImages(photos, category) {
+    const content = document.getElementById(category);
+    content.innerHTML = '';
     photos.forEach(photo => {
         const img = document.createElement('img');
         img.src = photo.src.medium;
         img.alt = photo.photographer;
-        gallery.appendChild(img);
+        content.appendChild(img);
     });
 }
-
-
-fetchImages('landscape');
-document.addEventListener('DOMContentLoaded', function () {
-    const accordionToggles = document.querySelectorAll('.accordion-toggle');
-
-    accordionToggles.forEach(toggle => {
-        toggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            const content = this.nextElementSibling;
-
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-            } else {
-                content.style.display = 'block';
-            }
-        });
-    });
-});
