@@ -1,59 +1,54 @@
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Portfolio</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <h1>Contact Me</h1>
     </header>
-    <header class="hero">
-        <nav>      
-            <a href="#gallery" class="hero-button">View Gallery</a>
-         <a href="contact.html" class="hero-button">Contact Me</a>
+    <main class="contact-content">
+        <section class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>I'd love to hear from you! Whether you have a question about my work or just want to say hello, feel free to reach out using the form below or through the contact details provided.</p>
             <ul>
-                <li class="accordion">
-                    <a href="#" class="accordion-toggle">Gallery Categories</a>
-                    <ul class="accordion-content">
-                        <li><a href="#" onclick="fetchImages('landscape')">Landscape</a></li>
-                        <li><a href="#" onclick="fetchImages('portrait')">Portrait</a></li>
-                        <li><a href="#" onclick="fetchImages('night')">Night</a></li>
-                        <li><a href="#" onclick="fetchImages('architecture')">Architecture</a></li>
-                        <li><a href="#" onclick="fetchImages('nature')">Nature</a></li>
-                    </ul>
-                </li>
-                <li>
-              
-                </li>
+                <li>Email: contact@example.com</li>
+                <li>Phone: (123) 456-7890</li>
             </ul>
-        </nav>
-        <div class="hero-content">
-            <button class="accordion">Welcome to My Photo Portfolio</button>
-            <div class="accordion-content">
-                <p>Explore a world of landscapes, portraits, and more through my lens. Greetings, Earthlings! I hail from the distant planet of Xylaria, a world filled with wonders beyond your imagination. As an alien in disguise, I've embarked on an intergalactic journey to experience human life firsthand. My mission? To blend in, learn your ways, and immerse myself in the fascinating quirks of Earth culture. Rest assured, I have absolutely no intentions of taking over your world—honest! I’m simply here to observe, participate, and perhaps offer a few extraterrestrial insights along the way. So, if you ever notice something a bit out of this world, that’s just me, enjoying the ride!</p>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="hero-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Me</h3>
+                <p>Passionate photographer capturing the beauty of the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@example.com</p>
+                <p>Phone: (123) 456-7890</p>
             </div>
         </div>
-    </header>
-    <main id="gallery"></main>
-    <script src="script.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; 2024 My Photo Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>About Me</h3>
-            <p>Passionate photographer capturing the beauty of the world.</p>
-        </div>
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <p>Email: example@example.com</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 My Photo Portfolio. All rights reserved.</p>
-    </div>
-</footer>
 </html>
